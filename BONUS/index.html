@@ -12,11 +12,14 @@
 <body>
     <div class="app">
         <h1>Email list</h1>
-        <ul>
+        <ul v-if="emails.length >= 10">
             <li v-for="email in emails">
                 {{ email}}
             </li>
         </ul>
+        <div v-else>
+            Caricamento in corso...
+        </div>
     </div>
 
     <script src="./js/script.js"></script>
